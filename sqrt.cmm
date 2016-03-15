@@ -1,0 +1,9 @@
+n = IN;
+if(n < 1) { OUT = 0; halt; }
+s = -1;
+snew = 1;
+while(s-snew>1 or s-snew<-1) {
+   s=snew;
+   snew = (s+n//s)//2;
+}
+OUT = snew;
